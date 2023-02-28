@@ -53,7 +53,11 @@ const unsigned int maxLedsPerStrip = 144;
 ### CLASH_THRESHOLD_G
 Next, we have the clash threshold. When two consecutive accelerometer readings differ by this
 much, a clash is triggered. The unit is in Gs. (About 9.81 newtons.) Larger values will make
-clashes harder to trigger, smaller values will make clashes easier to trigger.
+clashes harder to trigger, smaller values will make clashes easier to trigger.  There is no magic 
+number for clash thresholds.  Each lightsaber is different, and may require different settings.  Its
+important to make sure that your speaker and board are insulated from one another, as speaker vibrations 
+can effect the Proffieboard.  Sometimes the installer/user will need to balance between volume and clash 
+sensitivity to tune in a saber.
 
 ```cpp
 #define CLASH_THRESHOLD_G 1.0
